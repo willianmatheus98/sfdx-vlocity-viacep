@@ -1,18 +1,21 @@
-# Salesforce DX Project: Next Steps
+# Preview component
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+![Example](/assets/LWC%20Screenshot.png)
 
-## How Do You Plan to Deploy Your Changes?
+# How it works?
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+This study project uses VIACEP API to get address info at Brazil country filtered by the PostalCode (CEP) 
 
-## Configure Your Salesforce DX Project
+## Structure
+    SFDX side
+        LightningComponentBundle/mapCEP 
+    Vlocity side
+        IntegrationProcedure/CEP_Consulta
+        FlexCard/consultaCEP
+# SFDX Deploy
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+Go to the manifest/package.xml and click-right button on the file and select "SFDX: Deploy Source in Manifest to Org"
 
-## Read All About It
+# Vlocity
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+In the organization with omnistudio installed, go to the Tab Omnistudio Flexcards > Import button and select the file on vlocity/consultaCEP.json and click next until the activation step and finally activate the LWC Flexcard
